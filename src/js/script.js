@@ -27,16 +27,13 @@ btn.addEventListener("click", () => {
   const newLi = document.createElement("li");
   const tLi = document.createTextNode(text);
 
-  const newSpan = document.createElement("span");
-  const tSpan = document.createTextNode("X");
-
-  newSpan.appendChild(tSpan);
-  newSpan.setAttribute("class", "delete");
+  const newI = document.createElement("i");
+  newI.setAttribute("class", "delete fa-solid fa-trash");
 
   newLi.appendChild(tLi);
 
   newUl.appendChild(newLi);
-  newUl.appendChild(newSpan);
+  newUl.appendChild(newI);
 
   list.appendChild(newUl);
 
@@ -61,16 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const newLi = document.createElement("li");
       const tLi = document.createTextNode(text);
 
-      const newSpan = document.createElement("span");
-      const tSpan = document.createTextNode("X");
-
-      newSpan.appendChild(tSpan);
-      newSpan.setAttribute("class", "delete");
+      const newI = document.createElement("i");
+      newI.setAttribute("class", "delete fa-solid fa-trash");
 
       newLi.appendChild(tLi);
 
       newUl.appendChild(newLi);
-      newUl.appendChild(newSpan);
+      newUl.appendChild(newI);
 
       list.appendChild(newUl);
     });

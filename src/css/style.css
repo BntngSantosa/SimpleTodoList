@@ -337,6 +337,7 @@ footer .more{
   display: flex;
   gap: 10px;
 }
+
 /* Dark Mode */
 .dark-mode {
   background: url(../../asets/imgs/bg-body.jpeg), #1f1e24;
