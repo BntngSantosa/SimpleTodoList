@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: url(../../asets/imgs/bg-body.jpeg), #edecf2;
+  background-blend-mode: overlay;
+  transition: 0.5s ease-in-out;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 7%;
+  background-color: #edecf2;
+  backdrop-filter: blur(10px);
+  border: none;
+  color: #1f1e24;
+  font-family: "Signika";
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeDownEffect 0.5s ease-out forwards;
+  transition: 0.5s ease-in-out;
+}
+@keyframes fadeDownEffect {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav h1 {
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: 0.5s ease-in-out;
+}
+nav .fa-sun {
+  font-size: 20px;
+  color: #1f1e24;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+nav .fa-moon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #1f1e24;
+  transition: 0.5s ease-in-out;
+}
+#text-todo {
+  width: 100%;
+  padding: 1.4rem 7%;
+  transition: 0.5s ease-in-out;
+}
+#text-todo h1 {
+  text-align: center;
+  font-family: "Signika";
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUpEffect 0.5s ease-out forwards;
+  transition: 0.5s ease-in-out;
+}
+@keyframes fadeUpEffect {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#text-todo .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.5s ease-in-out;
+}
+#text-todo .content #t-area {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 350px;
+  min-height: 60px;
+  padding: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: #1f1e24;
+  background-color: #edecf2;
+  font-family: "Signika";
+  font-weight: 400;
+  font-size: 16px;
+  transform: scale(0);
+  animation: zoomtEffect 0.5s ease-out forwards;
+  transition: 0.5s ease-in-out;
+}
+@keyframes zoomtEffect {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#text-todo .content .btn {
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #edecf2;
+  font-family: 'Signika';
+  font-weight: 700;
+  color: #1f1e24;
+  cursor: pointer;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUpEffect 0.5s ease-out forwards;
+  transition: 0.5s ease-in-out;
+}
+@keyframes fadeUpEffect {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#list {
+  width: 100%;
+  padding: 1.4rem 7%;
+  transition: 0.5s ease-in-out;
+}
+#list .text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #edecf2;
+  border: none;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUpEffect 0.5s ease-out forwards;
+  transition: 0.5s ease-in-out;
+}
+@keyframes fadeUpEffect {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#list .text-list h3 {
+  color: #1f1e24;
+  font-family: "Signika";
+  font-weight: 400;
+  transition: 0.5s ease-in-out;
+}
+#list .text-list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #4b4956;
+  color: #edecf2;
+  border: none;
+  border-radius: 5px;
+  list-style: none;
+  font-family: "Signika";
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeDownEffect 0.5s ease-out forwards;
+  transition: 0.5s ease-in-out;
+}
+@keyframes fadeDownEffect {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#list .text-list ul .delete {
+  color: #edecf2;
+  font-weight: 700;
+  cursor: pointer;
+}
+#text-todo .content .btn:hover {
+  background-color: #4b4956;
+  color: #edecf2;
+}
+main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#successnone,
+#failednone,
+#containernone {
+  display: none;
+}
+#success,
+#failed,
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #1f1e2410;
+  backdrop-filter: blur(1px);
+  bottom: 0;
+  z-index: 2;
+  padding: 1.4rem 7%;
+}
+#success .container,
+#failed .container,
+#container .container {
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transform: scale(0);
+  animation: zoomtEffect 0.2s ease-out forwards;
+}
+@keyframes zoomtEffect {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#success .container i,
+#failed .container i,
+#container .container i {
+  font-size: 50px;
+  color: lightgreen;
+}
+#success .container p,
+#failed .container p,
+#container .container p {
+  font-family: "Signika";
+  font-weight: 600;
+  color: #1f1e24;
+}
+#success .container .btn-success,
+#failed .container .btn-failed,
+#container .container .btn .btn-oke {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1e24;
+  color: #edecf2;
+  cursor: pointer;
+}
+#container .container .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#container .container .btn .btn-cancel {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: #edecf2;
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.4rem 7%;
+  background-color: #edecf2;
+  font-family: 'Signika';
+  color: #1f1e24;
+  transition: 0.5s ease-in-out;
+}
+footer p a {
+  color: #1f1e24;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: url(../../asets/imgs/bg-body.jpeg), #1f1e24;
+  background-blend-mode: overlay;
+}
+.dark-mode nav {
+  background-color: #4b4956;
+  backdrop-filter: blur(10px);
+  color: #1f1e24;
+}
+.dark-mode nav h1 {
+  color: #edecf2;
+}
+.dark-mode nav .fa-sun {
+  color: #ffffff;
+}
+.dark-mode nav .fa-moon {
+  color: #edecf2;
+}
+.dark-mode #text-todo h1 {
+  color: #edecf2;
+}
+.dark-mode #text-todo .content #t-area {
+  background-color: #4b4956;
+  color: #edecf2;
+}
+.dark-mode #text-todo .content .btn {
+  background-color: #4b4956;
+  color: #edecf2;
+}
+.dark-mode #list .text-list {
+  background-color: #4b4956;
+}
+.dark-mode #list .text-list h3 {
+  color: white;
+}
+.dark-mode #list .text-list ul {
+  background-color: #edecf2;
+  color: #1f1e24;
+}
+.dark-mode #list .text-list ul .delete {
+  color: #1f1e24;
+}
+.dark-mode #text-todo .content .btn:hover {
+  background-color: #edecf2;
+  color: #1f1e24;
+}
+#successnone,
+#failednone,
+#containernone {
+  display: none;
+}
+#success,
+#failed,
+#container {
+  background-color: #1f1e2410;
+  backdrop-filter: blur(1px);
+}
+#success .container,
+#failed .container,
+#container .container {
+  background-color: #ffffff;
+}
+#success .container i,
+#failed .container i,
+#container .container i {
+  color: lightgreen;
+}
+#success .container p,
+#failed .container p,
+#container .container p {
+  color: #1f1e24;
+}
+#success .container .btn-success,
+#failed .container .btn-failed,
+#container .container .btn .btn-oke {
+  background-color: #1f1e24;
+  color: #edecf2;
+}
+#container .container .btn .btn-cancel {
+  background-color: #ff0000;
+  color: #edecf2;
+  cursor: pointer;
+}
+.dark-mode footer  {
+  background-color: #4b4956;
+  font-family: 'Signika';
+  color: #edecf2;
+}
+.dark-mode footer  p a {
+  color: #edecf2;
+}

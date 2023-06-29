@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List Sederhana</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="https://kit.fontawesome.com/f3a02c88f8.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <h1>TodoList</h1>
+      <i class="fa-solid fa-sun"></i>
+    </nav>
+    <main>
+      <section id="text-todo">
+        <h1>Save all your important notes</h1>
+        <div class="content">
+          <textarea name="" id="t-area" cols="30" rows="10" placeholder="Type your list"></textarea>
+          <button class="btn" type="submit">Save</button>
+        </div>
+      </section>
+      <section id="list">
+        <div class="text-list">
+          <h3>Your list :</h3>
+        </div>
+      </section>
+      <section id="successnone">
+        <div class="container">
+          <i class="fa-solid fa-circle-check"></i>
+          <p>Success</p>
+          <button class="btn-success">Ok</button>
+        </div>
+      </section>
+      <section id="failednone">
+        <div class="container">
+          <i class="fa-solid fa-circle-xmark" style="color: #ff0000"></i>
+          <p>Failed</p>
+          <button class="btn-failed">Ok</button>
+        </div>
+      </section>
+      <section id="containernone">
+        <div class="container">
+          <p>Are you sure you want to delete this record?</p>
+          <div class="btn">
+            <button class="btn-oke">Oke</button>
+            <button class="btn-cancel">Cancel</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Created with <i class="fa-solid fa-heart-crack" style="color: #ff0000"></i> by <a href="http://instagram.com/bntngsnts_/">Bintang Santosa</a></p>
+    </footer>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
