@@ -14,7 +14,7 @@ body {
   margin: 0;
   background: url(../../asets/imgs/bg-body.jpeg), #edecf2;
   background-blend-mode: overlay;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 nav {
   width: 100%;
@@ -31,7 +31,7 @@ nav {
   opacity: 0;
   transform: translateY(-50px);
   animation: fadeDownEffect 0.5s ease-out forwards;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @keyframes fadeDownEffect {
   from {
@@ -46,24 +46,24 @@ nav {
 nav h1 {
   letter-spacing: 2px;
   font-weight: 700;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 nav .fa-sun {
   font-size: 20px;
   color: #1f1e24;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 nav .fa-moon {
   font-size: 20px;
   cursor: pointer;
   color: #1f1e24;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 #text-todo {
   width: 100%;
   padding: 1.4rem 7%;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 #text-todo h1 {
   text-align: center;
@@ -74,7 +74,7 @@ nav .fa-moon {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeUpEffect 0.5s ease-out forwards;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @keyframes fadeUpEffect {
   from {
@@ -90,7 +90,7 @@ nav .fa-moon {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 #text-todo .content #t-area {
   max-width: 100%;
@@ -108,7 +108,7 @@ nav .fa-moon {
   font-size: 16px;
   transform: scale(0);
   animation: zoomtEffect 0.5s ease-out forwards;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @keyframes zoomtEffect {
   from {
@@ -133,7 +133,7 @@ nav .fa-moon {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeUpEffect 0.5s ease-out forwards;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @keyframes fadeUpEffect {
   from {
@@ -148,7 +148,7 @@ nav .fa-moon {
 #list {
   width: 100%;
   padding: 1.4rem 7%;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 #list .text-list {
   display: flex;
@@ -161,7 +161,7 @@ nav .fa-moon {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeUpEffect 0.5s ease-out forwards;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @keyframes fadeUpEffect {
   from {
@@ -177,7 +177,7 @@ nav .fa-moon {
   color: #1f1e24;
   font-family: "Signika";
   font-weight: 400;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 #list .text-list ul {
   display: flex;
@@ -195,7 +195,6 @@ nav .fa-moon {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeDownEffect 0.5s ease-out forwards;
-  transition: 0.5s ease-in-out;
 }
 @keyframes fadeDownEffect {
   from {
@@ -211,6 +210,7 @@ nav .fa-moon {
   color: #edecf2;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 #text-todo .content .btn:hover {
   background-color: #4b4956;
@@ -313,19 +313,30 @@ main {
 }
 footer {
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1.4rem 7%;
   background-color: #edecf2;
   font-family: 'Signika';
   color: #1f1e24;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+footer i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #1f1e24;
+  transition: 0.2s ease-in-out;
 }
 footer p a {
   color: #1f1e24;
   text-decoration: none;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-
+footer .more{
+  display: flex;
+  gap: 10px;
+}
 /* Dark Mode */
 .dark-mode {
   background: url(../../asets/imgs/bg-body.jpeg), #1f1e24;
@@ -417,4 +428,13 @@ footer p a {
 }
 .dark-mode footer  p a {
   color: #edecf2;
+}
+.dark-mode footer i {
+  color: #edecf2;
+}
+
+@media (max-width: 600px) {
+ footer {
+  font-size: 90%;
+ }
 }
